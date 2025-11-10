@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miorah Haircare | Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo">MIORAH <strong>HAIRCARE</strong></div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#cart">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="shop-container">
+    <h1 class="page-title">Shop Our Collection</h1>
+
+    <section class="product-grid">
+      <div class="product-card" data-id="1" data-img="item1.jpg">
+        <img src="item1.jpg" alt="Chebe Hair Growth Oil">
+        <h3>Chebe Hair Growth Oil</h3>
+        <p class="price">R199</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="2" data-img="item2.jpg">
+        <img src="item2.jpg" alt="Amla Nourishing Shampoo">
+        <h3>Amla Nourishing Shampoo</h3>
+        <p class="price">R179</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="3" data-img="item3.jpg">
+        <img src="item3.jpg" alt="Coconut Deep Conditioner">
+        <h3>Coconut Deep Conditioner</h3>
+        <p class="price">R149</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="4" data-img="item4.jpg">
+        <img src="item4.jpg" alt="Aloe & Shea Hair Butter">
+        <h3>Aloe & Shea Hair Butter</h3>
+        <p class="price">R169</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="4" data-img="item5.jpg">
+        <img src="item5.jpg" alt="Aloe & Shea Hair Butter">
+        <h3>Aloe & Shea Hair Butter</h3>
+        <p class="price">R169</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="4" data-img="item6.jpg">
+        <img src="item6.jpg" alt="Aloe & Shea Hair Butter">
+        <h3>Aloe & Shea Hair Butter</h3>
+        <p class="price">R169</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="4" data-img="item7.jpg">
+        <img src="item7.jpg" alt="Aloe & Shea Hair Butter">
+        <h3>Aloe & Shea Hair Butter</h3>
+        <p class="price">R169</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="cart" class="cart-section">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p><strong>Total:</strong> <span id="cart-total">R0</span></p>
+        <button id="checkout-btn">Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Miorah Haircare | Crafted with 🌿 Nature
+  </footer>
+
+  <script src="shop.js"></script>
+</body>
+</html>

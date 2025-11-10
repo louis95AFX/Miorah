@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miorah Haircare | Organic Formulations for Luxurious Hair</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ======= RESET ======= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #2c2c2c;
+      background: #fafafa;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ======= HEADER ======= */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .main-header.scrolled {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #222;
+      letter-spacing: 1px;
+    }
+
+    .main-nav .nav-list {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .main-nav a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #333;
+      position: relative;
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #6b705c;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .icon-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+    }
+
+    .icon-button:hover {
+      transform: scale(1.2);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* ======= HERO SECTION ======= */
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(250,250,250,0.95)), url('https://images.unsplash.com/photo-1600181953988-19a0b41f35d5?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 70px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-content {
+      max-width: 700px;
+      backdrop-filter: blur(6px);
+      padding: 2rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.6);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .hero-title {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #6b705c, #a5a58d);
+      color: #fff;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(135deg, #a5a58d, #6b705c);
+      transform: translateY(-3px);
+    }
+
+    /* ======= SECTIONS ======= */
+    .section-padding {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    section h2 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c2c2c;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #a5a58d;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* ======= FOOTER ======= */
+    footer {
+      background: #2c2c2c;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #a5a58d;
+      font-weight: 500;
+    }
+
+    /* ======= RESPONSIVE ======= */
+    @media (max-width: 768px) {
+      .main-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        display: none;
+      }
+
+      .main-nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="logo">MIORAH <strong>HAIRCARE</strong></div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#ingredients">Ingredients</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#guide">Hair Guide</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-icons">
+      <button aria-label="Search" class="icon-button">🔍</button>
+      <button aria-label="Account" class="icon-button">👤</button>
+      <button aria-label="Cart" class="icon-button">🛒</button>
+    </div>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Nature’s Secret to Luxurious, Healthy Hair</h1>
+        <p class="hero-subtitle">Miorah Haircare: Organic Formulations. Visible Results. Infused with Chebe & Amla.</p>
+        <a href="shop.html" class="cta-button">Shop The Collection</a>
+      </div>
+    </section>
+
+    <section id="features" class="section-padding">
+      <h2>The Miorah Difference</h2>
+      <p>Our products are crafted with ethically sourced natural ingredients designed to nourish, strengthen, and rejuvenate every strand.</p>
+    </section>
+
+    <section id="shop" class="section-padding">
+      <h2>Best Sellers</h2>
+      <p>Explore our most loved organic treatments for strong, vibrant hair that glows with health.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Miorah Haircare | Designed with 🌿 Love | <a href="#contact">Contact Us</a>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.main-header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

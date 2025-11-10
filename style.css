@@ -1,0 +1,184 @@
+/* --- Global Reset & Variables --- */
+:root {
+    --color-primary-white: #FFFFFF;
+    --color-secondary-green: #1A4D2E; /* Deep Forest Green */
+    --color-accent-gold: #C0A880; /* Soft Gold/Rose Gold */
+    --color-text-dark: #333333;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lora', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: #F8F7F5; /* Off-white/Cream background */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+}
+
+/* --- 1. Header (Navigation Bar) --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--color-primary-white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo **strong** {
+    color: var(--color-secondary-green);
+    font-weight: 400; /* Subtle contrast */
+}
+
+.main-nav .nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav .nav-list li a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav .nav-list li a:hover {
+    color: var(--color-secondary-green);
+    border-bottom: 2px solid var(--color-accent-gold);
+}
+
+.nav-icons .icon-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 15px;
+    color: var(--color-text-dark);
+    transition: color 0.3s;
+}
+
+.nav-icons .icon-button:hover {
+    color: var(--color-accent-gold);
+}
+
+.menu-toggle {
+    display: none; /* Hide on desktop */
+}
+
+/* --- 2. Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 70vh; /* Make it prominently tall */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('placeholder-hero.jpg'); /* REPLACE with your best product/lifestyle image */
+    background-size: cover;
+    background-position: center;
+    /* Optional: Add a subtle overlay for text readability */
+    /* & a soft natural gradient for elegance */
+    background-blend-mode: overlay; 
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.hero-content {
+    color: var(--color-primary-white);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* Slight dark backdrop for text */
+    border-radius: 8px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-secondary-green);
+    color: var(--color-primary-white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #113621; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+/* --- Utility & Spacing --- */
+.section-padding {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Mobile Responsiveness (For Clean Code) --- */
+@media (max-width: 900px) {
+    .main-nav, .nav-icons {
+        display: none; /* Hide main navigation on smaller screens */
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu icon */
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
